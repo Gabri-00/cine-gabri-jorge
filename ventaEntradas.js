@@ -1,6 +1,6 @@
-var aPelis=new Array("Que bello es vivir","Solo en casa","Cuento de Navidad");
-var aLoc= new Array(50,120,60);
-var aSalas=new Array("1","2","3");
+var aPelis=new Array("Que bello es vivir","Solo en casa","Gladiator 2","Cuento de Navidad");
+var aLoc= new Array(50,120,120,60);
+var aSalas=new Array("1","2","2","3");
 //Almacenamos la localidades vendidas por sala: aVendidas1, aVendidas2 y aVendidas3
 //y las vendidas en la pelicula seleccionada en el array vendidas
 var aVendidas1= new Array();    
@@ -12,7 +12,7 @@ var numButacas=0;   //butacas disponibles en la sala seleccionada
 var sala=0; //guardamos la sala seleccionada
 var butacaSel=0 //numero de butacas que se han elegido para comprar 
 var peli="";    //Titulo de la pelicula seleccionada
-const precio=3;
+const precio=5;
 
 /*Al seleccionar la pelicula recuperamos la localidades ya vendidas en esa sala
 asi como el numero de localidades de la sala */
@@ -22,7 +22,7 @@ function seleccionarPeli(){
     peli=aPelis[indice-1];
     numButacas=aLoc[indice-1];
     butacaSel=0;
-    switch(indice){
+    switch(sala){
         case "1":
             vendidas=aVendidas1.slice(0,aVendidas1.length);
             break;
@@ -39,7 +39,7 @@ function seleccionarPeli(){
 /*Se dibujan las localidades de la sala diferenciando si están disponibles o no  */
 function pintarButacas(){
     contenedor.innerHTML="<br>";
-    contenedor.innerHTML+="<h3>PATIO DE BUTACAS</h3>"
+    contenedor.innerHTML+="<h3>Sala de cine</h3>"
     for (i=1;i<=numButacas;i++){
             if (vendidas.includes(i)){
                 contenedor.innerHTML+="<button id='butaca"+i+"' class='ocupado'>"+i+"</button> ";
