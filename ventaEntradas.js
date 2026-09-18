@@ -57,6 +57,9 @@ function pintarButacas(){
         else{
             contenedor.innerHTML+="<br><br><button id='btnConfirm' onclick='confirmarVenta();' title='Comprar entradas'>Comprar</button>"
         }
+        if (vendidas.length / numButacas > 0.5){
+            contenedor.innerHTML+="<p class='warning' role='alert'>WARNING: Sala con más del 50% de ocupación. ¡Apresúrate a reservar!</p>";
+        }
 }
 
 /*Cuando se selecciona una localidad se comprueba si esta libre y se guarda o se borra

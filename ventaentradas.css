@@ -91,3 +91,13 @@ a{
     cursor: pointer;
     
 }
+.warning{
+    background-color: #ffcc00;
+    border: 2px solid #b00000;
+    color: #b00000;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 18px auto 8px;
+    padding: 8px;
+}
